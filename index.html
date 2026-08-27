@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Free Human Design Chart | Elizabeth Enlightens</title>
+<meta name="description" content="Pull your free Human Design chart - a map to your most authentic self. Discover your energy type, strategy, and how your body makes decisions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://app.bodygraph.com/integrate-chart/js" defer></script>
+<style>
+  :root{
+    --saffron:#f3af30; --saffron-soft:#f9d699; --saffron-tint:#fbe6c2;
+    --terracotta:#d2691e; --terracotta-mid:#de8a4f; --terracotta-soft:#f2ccb1;
+    --navy:#001f54; --navy-mid:#33496f; --navy-soft:#9fa9bd;
+    --umber:#5c4033; --umber-mid:#8a6a58;
+    --sand:#fdf8f0; --sand-deep:#f8efe1;
+    --ink:#2e2018;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',sans-serif;background:var(--sand);color:var(--ink);line-height:1.7;font-weight:300;font-size:16.5px}
+  h1,h2,h3{font-family:'Cinzel',serif;color:var(--navy);font-weight:500;line-height:1.25}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:'Poppins',sans-serif;letter-spacing:.28em;text-transform:uppercase;font-size:.72rem;font-weight:500;color:var(--terracotta)}
+
+  header.hero{background:linear-gradient(180deg,var(--saffron-tint) 0%,var(--sand) 100%);padding:84px 0 64px;text-align:center;position:relative;overflow:hidden}
+  header.hero::before{content:"";position:absolute;top:-140px;right:-140px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,var(--saffron-soft),transparent 70%);opacity:.55}
+  header.hero::after{content:"";position:absolute;bottom:-160px;left:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,var(--terracotta-soft),transparent 70%);opacity:.5}
+  .hero .wrap{position:relative;z-index:1}
+  .hero h1{font-size:clamp(2rem,5.6vw,3.2rem);margin:20px auto 22px;max-width:15em}
+  .hero p.lead{max-width:38em;margin:0 auto 34px;font-size:1.08rem;color:var(--umber)}
+  .hero p.lead strong{font-weight:500;color:var(--navy)}
+
+  .btn{display:inline-block;background:var(--terracotta-mid);color:#fff;font-family:'Poppins',sans-serif;font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem;padding:17px 42px;border-radius:999px;text-decoration:none;box-shadow:0 8px 24px rgba(210,105,30,.28);transition:transform .15s ease,background .15s ease}
+  .btn:hover{background:var(--terracotta);transform:translateY(-1px)}
+  .hero .micro{margin-top:16px;font-size:.8rem;color:var(--umber-mid)}
+
+  section{padding:64px 0}
+  .divider{width:64px;height:2px;background:var(--saffron);margin:0 auto 18px;border-radius:2px}
+  .center{text-align:center}
+  h2{font-size:clamp(1.5rem,3.6vw,2.1rem);margin-bottom:14px}
+  .sub{max-width:36em;margin:0 auto 40px;color:var(--umber)}
+
+  .path{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+  .step{display:flex;align-items:flex-start;gap:26px;background:#fff;border:1px solid var(--saffron-tint);border-radius:18px;padding:28px 32px;box-shadow:0 6px 22px rgba(92,64,51,.06);text-align:left}
+  .step .num{font-family:'Cinzel',serif;font-size:2rem;color:var(--terracotta-mid);line-height:1;min-width:52px;padding-top:4px}
+  .step .num small{display:block;font-family:'Poppins',sans-serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--umber-mid);margin-top:6px}
+  .step h3{font-size:1.08rem;margin-bottom:6px;color:var(--navy)}
+  .step p{font-size:.95rem;color:var(--umber)}
+
+  #chart{background:var(--sand-deep);border-top:1px solid var(--saffron-tint);border-bottom:1px solid var(--saffron-tint)}
+  .chart-shell{background:#fff;border-radius:22px;border:1px solid var(--terracotta-soft);box-shadow:0 12px 40px rgba(92,64,51,.08);padding:28px 16px;margin-top:8px}
+  .chart-note{margin-top:18px;font-size:.85rem;color:var(--umber-mid);text-align:center}
+
+  #deeper .card-wide{background:#fff;border:1px solid var(--saffron-tint);border-radius:22px;padding:44px 36px;text-align:center;box-shadow:0 8px 28px rgba(92,64,51,.07)}
+  #deeper p{max-width:36em;margin:0 auto 28px;color:var(--umber)}
+
+  footer{background:var(--sand-deep);border-top:1px solid var(--saffron-tint);padding:36px 0;text-align:center;font-size:.82rem;color:var(--umber-mid)}
+  footer a{color:var(--terracotta);text-decoration:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Elizabeth Enlightens &middot; Human Design</span>
+    <h1>It&rsquo;s time to remember who you are</h1>
+    <p class="lead">Your Human Design chart is a map to your most authentic self - who you were before the world told you who to be. <strong>Your energy type is the key to unlocking ease: when you align with it, life starts working for you.</strong></p>
+    <a class="btn" href="#chart">Pull my free chart</a>
+    <p class="micro">Free &middot; takes about a minute &middot; you just need your birth date, time, and place</p>
+  </div>
+</header>
+
+<section id="what">
+  <div class="wrap center">
+    <div class="divider"></div>
+    <h2>What your chart shows you</h2>
+    <p class="sub">This is not another personality quiz. It is calculated from the exact moment you were born, and it explains why some things drain you while others light you up.</p>
+    <div class="path">
+      <div class="step">
+        <div class="num">01<small>Type</small></div>
+        <div>
+          <h3>Where alignment begins</h3>
+          <p>Your type is more than your energy. It is the reason behind your strategy, and the reason life feels aligned when you live your design and heavy when you push against it. This is the essence everything else flows from.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">02<small>Strategy</small></div>
+        <div>
+          <h3>How life guides you</h3>
+          <p>The way opportunities are designed to reach you. Align with it and doors open with less resistance. Ignore it and everything feels like pushing.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">03<small>Authority</small></div>
+        <div>
+          <h3>How your body decides</h3>
+          <p>Your built-in compass for decisions - gut response, emotional wave, or instinct. You already have it. Your chart shows you where to listen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="chart">
+  <div class="wrap center">
+    <div class="divider"></div>
+    <h2>Pull your free chart</h2>
+    <p class="sub">Enter your birth details below. Your chart, with my interpretations, appears right here.</p>
+    <div class="chart-shell">
+      <bodygraph-embed chart-id="29968" token="b871087d-a08d-4a7c-898e-80daea983a07"></bodygraph-embed>
+    </div>
+    <p class="chart-note">Not sure of your birth time? An estimate still reveals your Type and Strategy for most people.</p>
+  </div>
+</section>
+
+<section id="deeper">
+  <div class="wrap">
+    <div class="card-wide">
+      <div class="divider"></div>
+      <h2>Want the full picture?</h2>
+      <p>Your chart holds more than any tool can show: your profile, your centers, the specific way conditioning has pulled you off course. In a 1:1 reading we sit with your chart together and turn it into real decisions.</p>
+      <a class="btn" href="https://www.elizabeth-enlightens.com/human-design-services">Explore readings</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Elizabeth Enlightens &middot; Human Design, Astrology, Numerology, BQH Hypnosis</p>
+    <p><a href="https://www.instagram.com/elizabeth_enlightens/">@elizabeth_enlightens</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
