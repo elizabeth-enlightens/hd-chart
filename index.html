@@ -7,7 +7,7 @@
 <meta name="description" content="Pull your free Human Design chart - the map of your most authentic self. Discover your energy type, strategy, and how your body makes decisions.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Dancing+Script:wght@600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <script src="https://app.bodygraph.com/integrate-chart/js" defer></script>
 <style>
   :root{
@@ -70,14 +70,19 @@
   .about a{color:var(--terracotta);text-decoration:none;font-weight:500;font-size:.9rem}
 
 
-  /* ---------- PERSONAL NOTE ---------- */
-  .note{background:radial-gradient(circle at 50% 0%,var(--saffron-tint) 0%,var(--sand) 60%)}
-  .note .card{background:#fff;border:1px solid var(--saffron-tint);border-radius:20px;padding:34px 26px;max-width:600px;margin:0 auto;box-shadow:0 10px 34px rgba(92,64,51,.08)}
-  .note h2{text-align:center;font-size:1.3rem;margin-bottom:18px}
-  .note p{color:var(--umber);font-size:.95rem;margin-bottom:14px}
-  .note .sign{font-family:'Cinzel',serif;color:var(--navy);font-size:1.05rem;margin-top:22px;margin-bottom:0;line-height:1.4}
-  .note .sign span{display:block;font-family:'Poppins',sans-serif;font-weight:300;font-style:italic;color:var(--umber-mid);font-size:.9rem;margin-bottom:2px}
-  @media(min-width:760px){ .note h2{font-size:1.5rem} .note .card{padding:44px 46px} }
+  /* ---------- PERSONAL NOTE (expandable ribbon) ---------- */
+  .note{background:var(--sand-deep);border-bottom:1px solid var(--saffron-tint)}
+  .note details{max-width:600px;margin:0 auto}
+  .note summary{list-style:none;cursor:pointer;padding:14px 22px;display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--umber);font-style:italic}
+  .note summary::-webkit-details-marker{display:none}
+  .note summary .heart{font-style:normal}
+  .note summary .chev{margin-left:auto;transition:transform .25s ease;color:var(--terracotta);font-style:normal}
+  .note details[open] summary .chev{transform:rotate(180deg)}
+  .note .body{padding:0 22px 22px}
+  .note .body p{color:var(--umber);font-size:.92rem;margin-bottom:12px}
+  .note .sign{font-family:'Dancing Script',cursive;color:var(--navy);font-size:1.7rem;line-height:1.3;margin-top:6px}
+  .note .sign span{display:block;font-family:'Poppins',sans-serif;font-weight:300;font-style:italic;color:var(--umber-mid);font-size:.85rem;margin-bottom:-2px}
+  @media(min-width:760px){ .note summary{font-size:.95rem} }
 
   footer{background:var(--sand-deep);border-top:1px solid var(--saffron-tint);padding:26px 0;text-align:center;font-size:.78rem;color:var(--umber-mid)}
   footer a{color:var(--terracotta);text-decoration:none}
@@ -123,6 +128,20 @@
   <p>The map to your most authentic self.</p>
 </section>
 
+<!-- PERSONAL NOTE (expandable ribbon) -->
+<section class="note">
+  <details>
+    <summary><span class="heart">&#128153;</span> A little note from me to you <span class="chev">&#9662;</span></summary>
+    <div class="body">
+      <p>Human Design has been part of my own journey of understanding myself and creating a life on my terms. It gave me the permission slip and courage to follow my heart&mdash;eventually leading me to become a digital nomad and live my dream life in Bali.</p>
+      <p>When I talk about Human Design, it always comes from that personal place. I wanted somewhere I could send you when you felt curious about your own design.</p>
+      <p>So I&rsquo;ve been putting this together: a place to get your free chart and take a first look at your design.</p>
+      <p>Later, I&rsquo;ll also be offering paid reports with my own interpretations to help you explore what it all means.</p>
+      <p class="sign"><span>With love,</span>Elizabeth</p>
+    </div>
+  </details>
+</section>
+
 <!-- CHART = the focus -->
 <section class="chart-hero" id="chart">
   <div class="wrap">
@@ -156,20 +175,6 @@
         <p>Now I help others understand their design so they can trust the pull and have the courage to follow their heart too. This free chart is where it starts.</p>
         <a href="https://www.elizabeth-enlightens.com/about">More about me &rarr;</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- PERSONAL NOTE -->
-<section class="note">
-  <div class="wrap">
-    <div class="card">
-      <h2>A little note from me to you</h2>
-      <p>Human Design has been part of my own journey of understanding myself and creating a life on my terms. It gave me the permission slip and courage to follow my heart&mdash;eventually leading me to become a digital nomad and live my dream life in Bali.</p>
-      <p>When I talk about Human Design, it always comes from that personal place. I wanted somewhere I could send you when you felt curious about your own design.</p>
-      <p>So I&rsquo;ve been putting this together: a place to get your free chart and take a first look at your design.</p>
-      <p>Later, I&rsquo;ll also be offering paid reports with my own interpretations to help you explore what it all means.</p>
-      <p class="sign"><span>With love,</span>Elizabeth</p>
     </div>
   </div>
 </section>
